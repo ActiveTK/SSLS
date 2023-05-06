@@ -2,6 +2,8 @@
 SSLSは、パスワードの重複を許さない<b>最恐のセキュリティシステム</b>です。<br>
 アカウント作成時におけるパスワード重複を適切に警告し、一人一人のユーザーが別のパスワードを使うことで、セキュリティの向上を図ることができます。
 
+<img src="https://cdn.jsdelivr.net/gh/ActiveTK/SSLS@main/objects/image/secure-login.png" style="width:auto;height:240px;">
+
 # Developer
 <h2>
   <img style="width:40px;height:40px;" src="https://www.activetk.jp/icon/activetk-v2_40x40.png">
