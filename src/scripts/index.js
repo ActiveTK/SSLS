@@ -35,14 +35,26 @@ $(window, document, undefined).ready(function() {
 });
 
 function Used() {
-    document.getElementById("used").style.display = "block";
+
+    if (!document.getElementById("pw").value) {
+        document.getElementById("used").innerHTML = "パスワードを空文字にすることはできません。";
+        document.getElementById("used").style.display = "block";
+        return false;
+    }
+    else if (document.getElementById("pw").value.length > 20) {
+        document.getElementById("used").innerHTML = "このパスワードは..重複こそはしていないものの、冗長であるため却下します。<br>もう少し短いパスワードをお試し下さい。";
+        document.getElementById("used").style.display = "block";
+        return false;
+    }
+
     let uniqid = "";
     for (var i = 0; i < 5; i++) {
         uniqid += 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'.charAt(Math.floor(Math.random() * 62));
     };
     document.getElementById("used").innerHTML =
-        // "<p style='background-color: #404ff0; color: #ffffff;'>エラー</p>" +
         "このパスワードは既に<a href='javascript:void(0);'>@" + uniqid + "</a>が使用しています。<br>" +
         "別のパスワードをお試し下さい。";
+
+    document.getElementById("used").style.display = "block";
     return false;
 }

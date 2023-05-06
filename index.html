@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
-<head>
+  <head>
 
     <title>SSLS - パスワードの重複を許さない最恐のセキュリティ</title>
 
@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <meta name="robots" content="ご自由にどうぞ。でも、できればインデックスはしないで欲しいな；">
+    <meta name="robots" content="ご自由にどうぞ。でも、できればインデックスはしないで欲しいな；
+          あ、アーカイブについてはarchive.today以外はOKです！">
 
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ja_JP">
@@ -21,7 +22,8 @@
     <script src="lib/js/ActiveTK.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=MML_SVG" async></script>
     <script src="src/scripts/index.js"></script>
-</head>
+
+  </head>
   <body>
 
     <div align="center">
@@ -46,7 +48,7 @@
                             <label class="la">UserName</label>
                         </div>
                         <div class="group">
-                            <input type="password" class="in"><span class="highlight"></span><span class="bar"></span>
+                            <input type="password" id="pw" class="in"><span class="highlight"></span><span class="bar"></span>
                             <label class="la">Passwd</label>
                         </div>
                         <p id="used" style="display: none; color: #ff4500; "></p>
@@ -78,7 +80,7 @@
                         <textarea name="contact_data" placeholder="質問・意見・文句・苦情・クレーム・宣伝・スパム等の内容をこちらへ入力してください。" style="height: 200px; width: 320px;"></textarea><br>
                         <pre>※本フォーム内に、個人情報を入力しないでください。</pre>
                         <br>
-                        <label><input type="checkbox" name="license_readme" value="ok" style="height:20px;width:20px;" required> 私は、日本国憲法の<a href="https://elaws.e-gov.go.jp/document?lawid=321CONSTITUTION_19470503_000000000000000" target="_blank">条文</a>を読み、理解しました。(必須)</label><br><br>
+                        <input type="checkbox" name="license_readme" value="ok" style="height:20px;width:20px;" required> 私は、日本国憲法の<a href="https://elaws.e-gov.go.jp/document?lawid=321CONSTITUTION_19470503_000000000000000" target="_blank">条文</a>を読み、理解しました。(必須)<br><br>
                         <br>
                         <input type="submit" style="height:60px;width:140px;" value="送信">
                         <br>
@@ -144,5 +146,5 @@
 
     </div>
 
-</body>
+  </body>
 </html>
