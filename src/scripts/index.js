@@ -47,10 +47,11 @@ function Used() {
         return false;
     }
 
-    let uniqid = "";
-    for (var i = 0; i < 5; i++) {
-        uniqid += 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'.charAt(Math.floor(Math.random() * 62));
-    };
+    // let uniqid = "";
+    // for (var i = 0; i < 5; i++) {
+    //     uniqid += 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'.charAt(Math.floor(Math.random() * 62));
+    // };
+    let uniqid = CybozuLabs.MD5.calc(document.getElementById("pw").value).slice(0, 5);
     document.getElementById("used").innerHTML =
         "このパスワードは既に<a href='javascript:void(0);'>@" + uniqid + "</a>が使用しています。<br>" +
         "別のパスワードをお試し下さい。";
